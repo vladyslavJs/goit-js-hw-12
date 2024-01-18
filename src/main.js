@@ -68,7 +68,7 @@ async function handleClickMore() {
     if (page >= Math.ceil(images.totalHits / per_page)) {
         iziToast.error({
             position: 'bottomLeft',
-            message: 'Oops...',
+            message: 'This is all we found...',
             color: '#37a1f2',
             messageColor: '#FFF',
             theme: 'dark',
@@ -117,7 +117,7 @@ function renderImgs(images) {
         (
             html,
             {
-                webformatURL, largeImageURL, tags, likes, views, comments, downloads
+                webformatURL, largeImageURL, tags, likes, views, comments, downloads, pageURL
             }
         ) => {
             return (
@@ -132,7 +132,7 @@ function renderImgs(images) {
                                 height='200'
                                 />
                         </a>
-                        <p class='gallery-tags'>Tags: ${tags}</p>
+                        <p class='gallery-tags'>Get link: ${pageURL}</p>
                         <ul class='gallery-statistic'>
                             <li><p class='statistic'>🩵Likes: <span>${likes}</span></p></li>
                             <li><p class='statistic'>👁Views: <span>${views}</span></p></li>
