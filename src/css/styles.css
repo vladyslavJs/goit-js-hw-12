@@ -7,7 +7,7 @@
 @import url('./reset.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -185,6 +185,16 @@ button[type='submit']:focus {
     transform: rotate(-360deg);
   }
 }
+
+.gallery-tags {
+  color: #808080;
+  font-size: small;
+}
+
+.gallery-tags:hover {
+  color: #37a1f2;
+}
+
 
 .gallery {
   display: flex;
