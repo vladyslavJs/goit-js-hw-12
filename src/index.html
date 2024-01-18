@@ -5,9 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Load more</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <h1 class="main-title">Found your favorite images</h1>
+    <form class="form" action="submit">
+      <input
+        name="search"
+        type="text"
+        autocomplete="off"
+        placeholder="Search.."
+      />
+      <button type="submit"><i class="bx bxs-hand-up"></i></button>
+    </form>
+
+    <ul class="gallery"></ul>
+    <button class="btn-load-more hide">
+      <i class="bx bx-loader-circle"></i>
+    </button>
+    <span class="loader hide"></span>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>
