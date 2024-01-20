@@ -252,7 +252,7 @@ span {
 @media screen and (max-width: 768px) {
 
   .gallery-item {
-    width: fit-content;
+    width:min-content;
   }
 
   .main-title {
