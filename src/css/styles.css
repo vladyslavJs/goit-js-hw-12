@@ -34,6 +34,8 @@
   text-align: center;
   justify-content: center;
   color:#fff;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .form {
@@ -244,4 +246,16 @@ button[type='submit']:focus {
 span {
   line-height: 1.5;
   letter-spacing: 0.04em;
+}
+
+@media screen and (max-width: 768px) {
+
+  .gallery-item {
+    width: fit-content;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+  
 }
