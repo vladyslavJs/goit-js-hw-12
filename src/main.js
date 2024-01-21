@@ -78,7 +78,6 @@ async function handleClickMore() {
         loadMoreBtn.classList.remove('hide');
     }
     renderImgs(images);
-    moveCard();
 }
 
 async function fetchImages() {
