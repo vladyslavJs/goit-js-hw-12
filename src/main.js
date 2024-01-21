@@ -16,15 +16,15 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-const per_page = 12;
+const per_page = 40;
 let page = 1;
 let userSearch = '';
 
 form.addEventListener('submit', submitHandle);
 loadMoreBtn.addEventListener('click', handleClickMore);
 
-async function submitHandle(e) {
-    e.preventDefault();
+async function submitHandle(event) {
+    event.preventDefault();
     page = 1;
     gallery.innerHTML = '';
     userSearch = form.search.value.trim();
@@ -45,7 +45,7 @@ async function submitHandle(e) {
     } else if (images.hits.length < per_page) {
         iziToast.error({
             position: 'bottomLeft',
-            message: 'Sorry, there are no images matching your search query.Please try again!',
+            message: 'We are sorry, but you have reached the end of search results.',
             color: '#37a1f2',
             messageColor: '#FFF',
             theme: 'dark',
@@ -68,7 +68,7 @@ async function handleClickMore() {
     if (page >= Math.ceil(images.totalHits / per_page)) {
         iziToast.error({
             position: 'bottomLeft',
-            message: 'This is all we found...',
+            message: 'We are sorry, but you have reached the end of search results.',
             color: '#37a1f2',
             messageColor: '#FFF',
             theme: 'dark',
